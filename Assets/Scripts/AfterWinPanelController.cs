@@ -10,7 +10,11 @@ public class AfterWinPanelController : MonoBehaviour
 
     private void Awake()
     {
-        text.text = "You won in " + DataStorage.movesCount + " moves";
+        if(DataStorage.winOrLose)
+            text.text = "You won in " + DataStorage.movesCount + " moves";
+        else
+            text.text = "You Lose";
+
         StartCoroutine(showLevelChooser());
     }
     private void OnMouseDown()

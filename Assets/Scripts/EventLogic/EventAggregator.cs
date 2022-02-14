@@ -6,6 +6,7 @@ public class EventAggregator : MonoBehaviour
 {
     public delegate void CircleClickEvent(Circle circle);
     public delegate void SquareClickEvent(Square square);
+    public delegate void TriangleClickEvent(Triangle triangle);
     
     public MainController mainController;
 
@@ -13,6 +14,7 @@ public class EventAggregator : MonoBehaviour
     {
         Circle.onCircleClick += mainController.CheckCircleClick;
         Square.onSquareClick += mainController.CheckSquareClick;
+        Triangle.onTriangleClick += mainController.CheckTriangleClick;
     }
 
 }
